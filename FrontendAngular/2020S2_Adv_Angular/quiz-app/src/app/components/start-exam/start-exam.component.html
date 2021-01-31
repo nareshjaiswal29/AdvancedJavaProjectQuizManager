@@ -1,0 +1,81 @@
+<div class="startexam-wrapper">
+<div class="form" *ngIf="mode=='Student'">
+  <div>
+    <form [formGroup]='registerStudentForm' (ngSubmit)="onStudentSubmit()">
+      <div>
+        <label>Student Name &nbsp;&nbsp; </label>
+        <input type="text" class="form-control" formControlName="StudentName">
+      </div>
+      <div class="buttons">
+        <button class="">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="quetions-list" *ngIf="mode=='Startquiz'">
+  <div class="select-quiz">
+    <label >Select Quiz</label>
+    <select (change)="selected($event)" class="select-css">
+      <option>SELECT</option>
+      <option *ngFor="let lstquiz of lstNews" value="{{lstquiz['id']}}">{{lstquiz['quizTitle']}}</option>
+    </select>
+  </div>
+  <div class="list">
+
+    <!-- Questions -->
+    <div class="question" *ngFor="let question of currentQuestion; let i = index">
+      <p>Question {{ i + 1 }}.</p>
+      <div class="question-text">
+        <p>{{question.questionTitle}} </p>
+      </div>
+      <div class="option" *ngFor="let option of question.choices;  let index = index">
+        <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected"(change)="onSelect(question, option, option.id);" /> 
+          <div class="option-sequence">{{ index + 1 }}.</div>
+          <p>{{option.choiceTitle}}</p>
+      </div>
+    </div>
+  </div>
+  <div style="width: 100%; text-align: center;">
+    <button (click)="Submit()"> Submit</button>
+  </div>
+</div>
+<div *ngIf="mode=='quizResult'">
+  <div class="list">
+    <h2 style="text-align: center;">Quiz Result</h2>
+    <!-- Questions -->
+    <div class="result-question" *ngFor="let question of currentQuestion; let i = index">
+
+      <p>Question {{ i + 1 }}.</p>
+      <div class="question-text">
+        <p>{{question.questionTitle}} </p>
+      </div>
+      <div class="option" *ngFor="let option of question.choices;  let index = index">
+        <input id="{{option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="option.selected" />
+          <div class="option-sequence">{{ index + 1 }}.</div>
+          <p>{{option.choiceTitle}}</p>
+      </div>
+      <div class="p-1 m-2 alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is
+        {{isCorrect(question)}}.</div>
+    </div>
+  </div>
+
+
+  <!-- <h2 style="text-align: center;">Quiz Result</h2>
+  <div *ngFor="let question of currentQuestion; let index = index">
+    <div class="result-question">
+      <h2>{{index + 1}}. {{question.questionTitle}}</h2>
+      <div class="row">
+        <div class="col-6" *ngFor="let Option of question.choices; let index = index">
+
+          <input id="{{Option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="Option.selected" />
+          {{index + 1}}.  {{Option.choiceTitle}}
+        </div>
+      </div>
+      <div class="p-1 m-2 alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is
+        {{isCorrect(question)}}.</div>
+    </div>
+  </div> -->
+  <h4 style="text-align: center;">Thank you for the Quiz participation.</h4>
+</div>
+</div>

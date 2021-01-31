@@ -1,0 +1,74 @@
+<div class="card" *ngIf="mode=='quiz'">
+    <form [formGroup]='registerQuizForm' (ngSubmit)="onQuizSubmit()">
+      <div class="form-row" style="width: 100%; text-align: center;">
+        <div>
+          <label>Enter Quiz Name: </label>
+          <input style="color: black;" type="text" class="form-control" formControlName="QuizName">
+        </div>
+        <br><br>
+      </div>
+      <div class="buttons">
+        <button class="">Add</button>
+        <button class="" type="reset">Reset</button>
+        <button (click)="Csvdownload()" class=""> ADD QUESTIONS</button>
+      </div>
+    </form>
+  </div>
+  
+  <div class="create-question card " *ngIf="mode=='questionType'">
+    <button (click)="Csvdownload()" class="add-question"> ENTER QUESTIONS</button>
+    <div class="form-data">
+      <form [formGroup]='registerForm' (ngSubmit)="onSubmit()">
+        <div class="correct-options">
+          <label>Select Quiz</label> &nbsp;
+          <select (change)="selected($event)">
+            <option>SELECT</option>
+            <option *ngFor="let lstquiz of lstNews" value="{{lstquiz['id']}}">{{lstquiz['quizTitle']}}</option>
+          </select>
+        </div>
+        <div class="Questions">
+          <label>Question</label>
+          <input type="text" class="form-control" formControlName="Question" [(ngModel)]="UQustion">
+        </div>
+        <div class="Questions">
+          <label>Topics</label>
+          <input type="text" class="form-control" formControlName="Topics" [(ngModel)]="UTopics">
+        </div>
+        <div class="Questions">
+          <label>Option 1</label>
+          <input type="text" class="form-control" formControlName="Option1" [(ngModel)]="UOptionValue1">
+        </div>
+        <div class="Questions">
+          <label>Option 2</label>
+          <input type="text" class="form-control" formControlName="Option2" [(ngModel)]="UOptionValue2">
+        </div>
+        <div class="Questions">
+          <label>Option 3</label>
+          <input type="text" class="form-control" formControlName="Option3" [(ngModel)]="UOptionValue3">
+        </div>
+        <div class="Questions">
+          <label>Option 4</label>
+          <input type="text" class="form-control" formControlName="Option4" [(ngModel)]="UOptionValue4">
+        </div>
+        <div class="correct-options">
+          <label>Select Correct Option</label> &nbsp;
+          <select (change)="getValue($event)">
+            <option>SELECT</option>
+            <option value="Option1">Option 1</option>
+            <option value="Option2">Option 2</option>
+            <option value="Option3">Option 3</option>
+            <option value="Option4">Option 4</option>
+          </select>
+        </div>
+  
+        <div class="buttons">
+          <button class="btn btn-success ">Submit</button>
+          <button class="btn btn-warning " type="reset">
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="quiz-core/src/main/java"/>
+	<classpathentry kind="src" path="quiz-core/src/test/java"/>
+	<classpathentry kind="lib" path="quiz-core/target/quiz-core-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="output" path="quiz-core/target/classes"/>
+</classpath>

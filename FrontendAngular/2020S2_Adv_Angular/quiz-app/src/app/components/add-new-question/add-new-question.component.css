@@ -1,0 +1,142 @@
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: #ffffff;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 2;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    margin-top: 2vh;
+    
+   }
+
+   button:hover {
+    background-color: #37b33b;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color:  #ffffff;
+    transform: translateY(-7px);
+  }
+
+  .card{
+      width: 50vw;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      margin-top: 10vh;
+  }
+  .form{
+    margin-top: 11vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+input[type=text] {
+  width: 100%;
+  padding: 15px 20px 1px 20px;
+  margin-top: 2vh ;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #1D0229;
+  font-size: large;
+  color:cornsilk;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.create-question{
+    width: 70vw;
+    background-color:#424242;
+    border-radius: 25px;
+    margin-bottom: 20vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    color: #ffffff;
+    align-items: center;
+    margin-bottom: 3em;
+    padding-bottom: 1em;
+    
+}
+
+.create-question .add-question{
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    background: unset;    
+}
+
+.form-data{
+    margin-top: 3em;
+    width: 90%;
+    font-weight: normal;
+    font-size: medium;
+}
+
+.form-data label{
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-data input {
+    width: 100%;
+    padding: 15px 20px 1px 20px;
+    margin-top: 2vh ;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #1D0229;
+    font-size: large;
+    background-color: transparent;
+  }
+
+.form-data .Questions{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    
+}
+
+.form-data .Questions label{
+    text-align: left;
+    width: 12%;
+    padding-right: 2em;
+}
+
+.correct-options{
+    margin-top: 2em;
+}
+
+.correct-options select{
+    width: 7em;
+    background-color: black;
+    font-weight: bold;
+    font-size: medium;
+    border-bottom: 2px black solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    color:cornsilk;
+
+}

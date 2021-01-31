@@ -1,0 +1,28 @@
+
+<div class="quetions-list">
+  <div class="select-quiz">
+    <label >Select Quiz</label>
+    <select (change)="selected($event)" class="select-css">
+      <option>SELECT</option>
+      <option *ngFor="let lstquiz of lstNews" value="{{lstquiz['id']}}">{{lstquiz['quizTitle']}}</option>
+    </select>
+  </div>
+  <div class="list">
+
+    <!-- Questions -->
+    <div class="question" *ngFor="let project of currentQuestion; let i = index">
+      <p>Question {{ i + 1 }}.</p>
+      <div class="question-text">
+        <p>{{project.questionTitle}} </p>
+        <div class="icons-wap">
+        <a (click)="sendtoupdate(project)"><img class="icon-edit" src="../../../assets/edit-solid.svg" alt=""></a>
+        <a (click)="DeleteQuestion(project.questionId)"><img class="icon-delete" src="../../../assets/trash-solid.svg" alt=""></a>
+      </div>
+      </div>
+      <div class="option" *ngFor="let image of project.choices; let i = index">
+        <div class="option-sequence">{{ i + 1 }}.</div>
+        <p>{{image.choiceTitle}}</p>
+      </div>
+    </div>
+  </div>
+<div>

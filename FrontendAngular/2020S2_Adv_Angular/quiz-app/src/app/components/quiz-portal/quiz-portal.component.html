@@ -1,0 +1,48 @@
+<p>quiz-portal works!</p>
+<style>
+    button {
+   background-color: #4CAF50;
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+   border-radius: 12px;
+ }
+</style>
+
+<div style="width: 100%;">
+    <!-- <div style="width: 100%; background-color: cadetblue;">
+        <h1 style="text-align: center;">Welcome to ScureInfosec BackEnd Portal</h1>
+        <div style="text-align:right;margin-left: 30px;">
+            <a style="color: cornsilk; font-size: larger;margin-right: 30px;" href="javascript:void(0);" (click)="Home()">Home</a>
+      <a style="color: cornsilk; font-size: larger;margin-right: 30px;" href="javascript:void(0);" (click)="logout()">Logout</a>
+      </div>
+      </div> -->
+      <app-dashboard-header ></app-dashboard-header>
+    <div style="width: 100%;height: 520px; background-color:mintcream;">
+    <div>
+        <table>
+            <tr>
+                <th><div>
+                    <h3 style="text-align: left;">Choose Your Option:-</h3>
+                </div></th>
+            </tr>
+            <tr>
+                
+                <th> <div>
+                    <button (click)="redirectToTeacher()">Teacher</button>
+                </div></th>
+                <th><div>
+                    <button (click)="redirectToStudent()">Student</button>
+                </div></th>
+            </tr>
+        </table>       
+    </div>
+
+</div>
+</div>
