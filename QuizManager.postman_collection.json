@@ -1,0 +1,339 @@
+{
+	"info": {
+		"_postman_id": "6f6dc5ca-008f-482a-883d-05a5ffc618bf",
+		"name": "QuizManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/quiz-rest/rest/quizzes/AllQuestionsByQuizId/200",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/quiz-rest/rest/quizzes/AllQuestionsByQuizId/200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quiz-rest",
+						"rest",
+						"quizzes",
+						"AllQuestionsByQuizId",
+						"200"
+					]
+				},
+				"description": "Get all Questions by Quiz ID."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/quiz-rest/rest/quizzes/15/questions",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"questionId\":103,\r\n    \"questionTitle\": \"my new question 999\",\r\n    \"choices\": [\r\n        {\r\n            \"id\":105,\r\n            \"choiceTitle\": \"my choice18\"\r\n           \r\n        }\r\n         \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/quiz-rest/rest/quizzes/15/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quiz-rest",
+						"rest",
+						"quizzes",
+						"15",
+						"questions"
+					]
+				},
+				"description": "Upadate Questions."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/quiz-rest/rest/quizzes/questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/quiz-rest/rest/quizzes/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quiz-rest",
+						"rest",
+						"quizzes",
+						"questions"
+					]
+				},
+				"description": "Get all Questions"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/quiz-rest/rest/quizzes/0/questions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"questionTitle\": \"my new question 101\",\r\n    \"quizId\":\"1\",\r\n    \"topics\":\"abb\",\r\n    \"choices\": [\r\n        {\r\n            \"choiceTitle\": \"my choice1\",\r\n            \"valid\":false\r\n        },\r\n        {\r\n            \"choiceTitle\": \"my choice2\",\r\n            \"valid\":false\r\n        },\r\n        {\r\n            \"choiceTitle\": \"my choice3\",\r\n            \"valid\":false\r\n        },\r\n        {\r\n            \"choiceTitle\": \"my choice4\",\r\n            \"valid\":true\r\n        }\r\n         \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/quiz-rest/rest/quizzes/0/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quiz-rest",
+						"rest",
+						"quizzes",
+						"0",
+						"questions"
+					]
+				},
+				"description": "Create question."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/quiz-rest/rest/quizzes/question/150",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/quiz-rest/rest/quizzes/question/150",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quiz-rest",
+						"rest",
+						"quizzes",
+						"question",
+						"150"
+					]
+				},
+				"description": "Delete question"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/quiz-rest/rest/quizzes/questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/quiz-rest/rest/quizzes/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quiz-rest",
+						"rest",
+						"quizzes",
+						"questions"
+					]
+				},
+				"description": "Get All Questions"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/quiz-rest/rest/quizzes/questions/201",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/quiz-rest/rest/quizzes/questions/201",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quiz-rest",
+						"rest",
+						"quizzes",
+						"questions",
+						"201"
+					]
+				},
+				"description": "Get question by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/quiz-rest/rest/students/0/student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentName\": \"Naresbvvvh12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/quiz-rest/rest/students/0/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quiz-rest",
+						"rest",
+						"students",
+						"0",
+						"student"
+					]
+				},
+				"description": "Create Student"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/quiz-rest/rest/students/students/23",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/quiz-rest/rest/students/students/23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quiz-rest",
+						"rest",
+						"students",
+						"students",
+						"23"
+					]
+				},
+				"description": "Get Students"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/quiz-rest/rest/studentExam/0/answers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"questionId\": \"2\",\r\n    \"studenId\": \"101\",\r\n    \"answer\": \"1\",\r\n    \"quizId\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/quiz-rest/rest/studentExam/0/answers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quiz-rest",
+						"rest",
+						"studentExam",
+						"0",
+						"answers"
+					]
+				},
+				"description": "Save Student Exam Answers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/quiz-rest/rest/quizzes/quizAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/quiz-rest/rest/quizzes/quizAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quiz-rest",
+						"rest",
+						"quizzes",
+						"quizAll"
+					]
+				},
+				"description": "Get all Quiz"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/quiz-rest/rest/quizzes/0/quiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quizTitle\":\"Java Quiz 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/quiz-rest/rest/quizzes/0/quiz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quiz-rest",
+						"rest",
+						"quizzes",
+						"0",
+						"quiz"
+					]
+				},
+				"description": "Save Quiz Name"
+			},
+			"response": []
+		}
+	]
+}
